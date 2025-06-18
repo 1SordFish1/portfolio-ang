@@ -32,8 +32,9 @@ export class App {
         loaderTimeline.to(".loader", {opacity: 1});
 
         loaderTimeline.to("#loader-text", {
-          delay: 2,
+          delay: 1,
           duration: 2,
+          ease: "sine.inOut",
           scrambleText: {
             text: "Ready to Go",
             chars: chars,
@@ -43,11 +44,12 @@ export class App {
           }
         });
 
+        loaderTimeline.to(".loader", {delay: 0.5,opacity: 0});
+
         loaderTimeline.to("#app-loader", {
           scaleY: 0,
           opacity: 0,
           transformOrigin: "50% 0%",
-          delay: 1,
           duration: 1,
           ease: "power4.out",
           onComplete: () => {
