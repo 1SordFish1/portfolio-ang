@@ -55,7 +55,7 @@ export class App {
           onComplete: () => {
             const loader = document.querySelector('#app-loader');
             if (loader) {
-              loader.remove()
+              loader.remove();
             }
           }
         });

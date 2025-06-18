@@ -15,23 +15,59 @@
     margin: 0;
     color: white;
     height: 100vh;
-    font-size: 27em;
+    font-size: 27rem;
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
   }
 }
 
-
 .name-container {
-  padding-inline: 20vw;
-  height: 100vh;
-  h1 {
-    font-size: 5em;
-    text-align: center;
-  }
+  display: flex;
 }
 
+.divider {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.text-container {
+  padding-inline: 5vw;
+  h1 {
+    font-size: 5rem;
+    text-align: left;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-top: 10vh;
+    margin-bottom: 0vh;
+  }
+
+  .about-me {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+  }
+
+  h2 {
+    color: #c2c2c2;
+    font-size: 3rem;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+  }
+
+  a {
+    color: black;
+    font-size: 1.1rem;
+  }
+
+  .contact-flex {
+    margin-block: 2.5vh;
+    display: flex;
+    gap: 2vw;
+  }
+}
 
 .gradient-text {
   color: transparent;
