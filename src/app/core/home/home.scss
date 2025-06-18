@@ -69,6 +69,20 @@
   }
 }
 
+.linkedin {
+  img {
+    object-fit: contain;
+    width: 25px;
+  }
+}
+
+.github {
+  img {
+    object-fit: contain;
+    width: 25px;
+  }
+}
+
 .gradient-text {
   color: transparent;
   background-size: 200%;
