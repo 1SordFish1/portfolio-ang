@@ -32,7 +32,7 @@ export class Home {
           }
         });
 
-        tlIntro.to('.hello-text', { scale: 130, xPercent: -250, transaformOrigin: "50% 50%" })
+        tlIntro.to('.hello-text', { scale: 130, xPercent: -250, transaformOrigin: "50vh 50vw" })
       });
     }
   }
