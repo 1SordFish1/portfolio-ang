@@ -47,7 +47,7 @@ export class App {
         loaderTimeline.to(".loader", {delay: 0.5,opacity: 0});
 
         loaderTimeline.to("#app-loader", {
-          scaleY: 0,
+          // scaleY: 0,
           opacity: 0,
           transformOrigin: "50% 0%",
           duration: 1,

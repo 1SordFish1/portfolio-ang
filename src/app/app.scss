@@ -28,3 +28,9 @@
   background-color: white;
   border-radius: 50%;
 }
+
+@media screen and (width <= 600px) {
+  .loader {
+    font-size: 2rem;
+  }
+}
