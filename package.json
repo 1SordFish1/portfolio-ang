@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "app": "ng serve --port=4255",
+    "hostapp": "ng serve --port=4255 --host=172.17.0.65",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
