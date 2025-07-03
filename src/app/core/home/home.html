@@ -76,37 +76,19 @@
       <h2>Skills</h2>
       <div class="divider"></div>
       <div class="skill set">
-        <span>JavaScript</span>
-        <span>TypeScript</span>
-        <span>HTML</span>
-        <span>CSS/SCSS</span>
-        <span>Angular</span>
-        <span>RxJS</span>
-        <span>Jest</span>
-        <span>GraphQL</span>
-        <span>GIT</span>
-        <span>GitLab</span>
-        <span>Unit Testing</span>
-        <span>E2E Testing</span>
-        <span>Cypress</span>
-        <span>NodeJS</span>
-        <span>Express.JS</span>
+        @for (skill of mySkills; track $index) {
+          <span>{{skill}}</span>
+        }
       </div>
       <h2>Tools</h2>
       <div class="divider"></div>
       <div class="tools set">
-        <div class="tool">
-          <img src="assets/vscode.png" alt="">
-          <span>VS Code</span>
-        </div>
-        <div class="tool">
-          <img src="assets/elephant.png" alt="">
-          <span>PostgreSQL</span>
-        </div>
-        <div class="tool">
-          <img src="assets/postman.png" alt="">
-          <span>Postman</span>
-        </div>
+        @for (item of myTools; track $index) {
+          <div class="tool">
+            <img src="{{item.image}}" alt="">
+            <span>{{item.name}}</span>
+          </div>
+        }
       </div>
     </div>
   </div>

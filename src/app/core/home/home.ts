@@ -13,6 +13,42 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 })
 export class Home {
 
+  mySkills: string[] = [
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS/SCSS",
+    "Angular",
+    "RxJS",
+    "NgRX Store",
+    "Jest",
+    "GraphQL",
+    "GIT",
+    "GitLab",
+    "Version Control System",
+    "Agile Methodology",
+    "Unit Testing",
+    "E2E Testing",
+    "Cypress",
+    "NodeJS",
+    "Express.JS"
+  ];
+
+  myTools: {image: string, name: string}[] = [
+    {
+      image: "assets/vscode.png",
+      name: "VS Code"
+    },
+    {
+      image: "assets/elephant.png",
+      name: "PostgreSQL"
+    },
+    {
+      image: "assets/postman.png",
+      name: "Postman"
+    }
+  ]
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit() {
