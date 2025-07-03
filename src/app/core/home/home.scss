@@ -1,10 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
-  padding: 0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .hello-container {
   position: relative;
+  width: 100vw;
   height: 150vh;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -165,7 +172,6 @@
 
 .skill {
   span {
-    height: 20px;
     padding: 5px 10px;
     width: fit-content;
     color: white;
@@ -180,7 +186,7 @@
   gap: 0.5vw;
   border: 2px solid black;
   padding: 5px 10px;
-  height: 30px;
+  height: 50px;
   border-radius: 30px;
 
   img {
@@ -194,6 +200,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.resume-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  right: 3vw;
+  bottom: 3vh;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 30px;
+  z-index: 2;
+
+  img {
+    object-fit: contain;
+    width: 30px;
+  }
 }
 
 @media screen and (width <=600px) {
@@ -226,5 +252,17 @@
 
   .exp-border {
     display: none;
+  }
+
+  .set {
+    gap: 2.5vw;
+  }
+
+  .tool {
+    gap: 1.5vw;
+  }
+
+  .resume-btn {
+    right: 6vw;
   }
 }
