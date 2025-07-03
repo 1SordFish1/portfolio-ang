@@ -29,6 +29,11 @@
   border-radius: 50%;
 }
 
+.disabe-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 @media screen and (width <= 600px) {
   .loader {
     font-size: 2rem;
