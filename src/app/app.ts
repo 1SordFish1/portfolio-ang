@@ -1,5 +1,6 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import { gsap } from "gsap"
 import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
@@ -11,8 +12,16 @@ import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
   styleUrl: './app.scss'
 })
 export class App {
-  enableScroll = false;
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  constructor(
+    private meta: Meta,
+    private title: Title,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
+
+  ngOnInit() {
+    this.title.setTitle('Achuothan M | Seasoned Web Developer');
+    this.meta.updateTag({ name: 'description', content: 'Portfolio of Achuothan M, an Angular and JavaScript frontend developer.' });
+  }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -29,8 +38,8 @@ export class App {
           autoRemoveChildren: true,
         });
 
-        loaderTimeline.set(".loader", {opacity: 0});
-        loaderTimeline.to(".loader", {opacity: 1});
+        loaderTimeline.set(".loader", { opacity: 0 });
+        loaderTimeline.to(".loader", { opacity: 1 });
 
         loaderTimeline.to("#loader-text", {
           delay: 1,
@@ -45,7 +54,7 @@ export class App {
           }
         });
 
-        loaderTimeline.to(".loader", {delay: 0.5,opacity: 0});
+        loaderTimeline.to(".loader", { delay: 0.5, opacity: 0 });
 
         loaderTimeline.to("#app-loader", {
           // scaleY: 0,
