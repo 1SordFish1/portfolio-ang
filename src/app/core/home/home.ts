@@ -57,7 +57,7 @@ export class Home {
       gsap.registerPlugin(SplitText);
       gsap.registerPlugin(ScrollToPlugin) ;
       requestAnimationFrame(() => {
-        gsap.to(window, {delay: 3, duration: 1, scrollTo:0});
+        gsap.to(window, {delay: 3.25, duration: 1, scrollTo:0});
 
         gsap.timeline({ repeat: -1, yoyo: false, repeatDelay: 0 })
           .add(gsap.set(".gradient-text", { backgroundPositionX: 0 }))
